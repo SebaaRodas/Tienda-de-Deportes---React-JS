@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Nav, NavDropdown } from "react-bootstrap";
+import Navbar from 'react-bootstrap/Navbar';
+
 
 ReactDOM.render(
   <React.StrictMode>
