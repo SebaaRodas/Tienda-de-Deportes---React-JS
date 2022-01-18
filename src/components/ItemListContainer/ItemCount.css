@@ -1,0 +1,23 @@
+.botonesContador{
+    display: flex;
+}
+
+.botonChico{
+    display: inline-flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.botonGrande{
+    background-color: rgb(13, 13, 148);
+    color: white;
+    margin-top: 10px;
+}
+
+.contador{
+    display: inline-flex;
+    font-size: 20px;
+    align-items: center;
+    margin: 0 10px;
+}
