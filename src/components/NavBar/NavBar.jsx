@@ -28,6 +28,7 @@ export default function NavBar() {
                                 <NavDropdown.Item><Link to={'/marcas/adidas'}>Adidas</Link></NavDropdown.Item>
                                 <NavDropdown.Item><Link to={'/marcas/puma'}>Puma</Link></NavDropdown.Item>
                             </NavDropdown>
+                            {/* <Nav.Link as={Link} to={'/marcas'}>Marcas</Nav.Link> */}
                             <Nav.Link as={Link} to={'/contacto'}>Contacto</Nav.Link>
                             <Nav.Link as={Link} to={'/carrito'}><CartWidget /></Nav.Link>
                         </Nav>

@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer';
+import Marcas from './components/ItemListContainer/Marcas';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           
           {/* ruta marcas */}
           <Route path="/marcas/:marca">
-            Estas en marcas
+            <Marcas />
           </Route>
 
           {/* ruta contacto */}

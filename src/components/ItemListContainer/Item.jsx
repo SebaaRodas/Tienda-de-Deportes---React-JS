@@ -10,8 +10,6 @@ export default function Item(props) {
         swal('Se ha agregado al carrito correctamente!');
     }
     
-
-
     return (
         <>
             <Card className="card" style={{ width: '18rem' }}>
@@ -26,6 +24,6 @@ export default function Item(props) {
                     <Button className="botonGrande" onClick={() =>onAdd()}>Agregar al carrito</Button>
                 </Card.Body>
             </Card>
-            </>
+        </>
     )
 }
