@@ -11,6 +11,9 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+Esta página está destinada a realizar los desafíos prácticos propuestos por el curso de Coderhouse. 
+No es de manera publicitaria (debido a que están varias marcas importantes), sino con el fin de ir mejorando mi aprendizaje en React Js.
+
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
