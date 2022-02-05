@@ -9,7 +9,11 @@
     color: white;
 }
 
-
+.botonGrande{
+    background-color: rgb(13, 13, 148);
+    color: white;
+    margin-top: 10px;
+}
 
 .contador{
     display: inline-flex;

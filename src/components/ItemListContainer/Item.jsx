@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Card, Button } from "react-bootstrap";
 import ItemCount from "./ItemCount";
 import './Item.css';
@@ -6,10 +6,13 @@ import swal from "sweetalert";
 import { Link } from "react-router-dom";
 
 export default function Item(props) {
-    function onAdd(){
-        swal('Se ha agregado al carrito correctamente!');
+
+    const [mostrar, setMostrar] = useState(true);
+    function onAdd(cantidad) {
+        swal('Se ha agregado al carrito correctamente' + " " + cantidad + " " + 'productos');
+        setMostrar(false);
     }
-    
+
     return (
         <>
             <Card className="card" style={{ width: '18rem' }}>
@@ -19,9 +22,17 @@ export default function Item(props) {
                     <Card.Text>
                         ${props.prod.precio}
                     </Card.Text>
-                    <ItemCount stock={5} initial={1} />
+                    {
+                        (mostrar) ?
+                            <>
+                                <ItemCount stock={props.prod.stock} initial={1} onAdd={onAdd} />
+                            </>
+                            :
+                            <>
+                                <Button className="botonGrande"><Link className="carrito" to={"/carrito"}>Finalizar Compra</Link></Button>
+                            </>
+                    }
                     <Button className="botonGrande"><Link className="detalles" to={`/detalles/${props.prod.id}`}>Ver detalles</Link></Button>
-                    <Button className="botonGrande" onClick={() =>onAdd()}>Agregar al carrito</Button>
                 </Card.Body>
             </Card>
         </>

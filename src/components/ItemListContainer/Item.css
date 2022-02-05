@@ -3,7 +3,7 @@
 .card{
     display: inline-flex;
     max-width: 30%;
-    margin: 12px;
+    margin: 25px;
     padding: 10px;
     /* margin-bottom: 20px; */
     justify-content: space-between;
@@ -16,7 +16,7 @@
     margin-top: 10px;
 }
 
-.detalles{
+.detalles, .carrito{
     text-decoration: none;
     color: white;
 }
