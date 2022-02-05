@@ -5,30 +5,29 @@ import swal from "sweetalert";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
-export default function ItemDetail({ producto }) {
+export default function ItemDetail(props) {
 
     const [mostrar, setMostrar] = useState(true);
-
     function onAdd(cantidad) {
-        swal('Se ha agregado al carrito correctamente' + ' ' + cantidad + ' ' + 'productos');
+        swal('Se ha agregado al carrito correctamente' + " " + cantidad + " " + 'productos');
         setMostrar(false);
     }
 
 
     return (
         <>
-            <h3>{producto.nombre} {producto.marca}</h3>
+            <h3>{props.productos.nombre} {props.productos.marca}</h3>
             <br />
             <Container>
                 <Row>
-                    <Col><img className="detalleImagen" alt="detalle" src={producto.pictureUrl} /></Col>
+                    <Col><img className="detalleImagen" alt="detalle" src={props.productos.pictureUrl} /></Col>
                     <Col>
-                        <p>{producto.descripcion}</p>
-                        <p>Precio: ${producto.precio}</p>
+                        <p>{props.productos.descripcion}</p>
+                        <p>Precio: ${props.productos.precio}</p>
                         {
                             (mostrar) ?
                                 <>
-                                    <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
+                                    <ItemCount stock={props.productos.stock} initial={1} onAdd={onAdd} />
                                 </>
                                 :
                                 <>
