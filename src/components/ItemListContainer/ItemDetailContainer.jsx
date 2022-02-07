@@ -1,12 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import './ItemListContainer.css';
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import swal from "sweetalert";
+import { cartContext } from "../context/CartProvider";
 
 export default function ItemDetailContainer() {
 
+    const {agregarAlCarro} = useContext(cartContext); 
+    
     const {id} = useParams();
+    
     const [productos, setProductos] = useState([]);
+
+    const [mostrar, setMostrar] = useState(true);
 
     const listaProductos = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -24,11 +31,18 @@ export default function ItemDetailContainer() {
             .then(item => {
                 setProductos(item.find(item => item.id == `${id}`));
             })
-    }, [])
+    }, [id])
+
+    function onAdd(cantidad) {
+        console.log(`agregaste: ${productos.nombre} ${productos.marca}, cantidad: ${cantidad}`);
+        swal('Se ha agregado al carrito correctamente' + " " + cantidad + " " + 'productos');
+        agregarAlCarro(productos, cantidad);
+        setMostrar(false);
+    }
 
     return (
         <>
-            <ItemDetail productos = {productos} />   
+            <ItemDetail productos={productos} onAdd={onAdd} mostrar={mostrar} />   
         </>
     )
 }

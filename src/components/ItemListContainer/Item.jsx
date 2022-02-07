@@ -4,12 +4,21 @@ import ItemCount from "./ItemCount";
 import './Item.css';
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { cartContext } from "../context/CartProvider";
 
 export default function Item(props) {
 
+    const {agregarAlCarro} = useContext(cartContext);
     const [mostrar, setMostrar] = useState(true);
+    // function onAdd(cantidad) {
+    //     swal('Se ha agregado al carrito correctamente' + " " + cantidad + " " + 'productos');
+    //     setMostrar(false);
+    // }
     function onAdd(cantidad) {
+        // console.log(`agregaste: ${productos.nombre} ${productos.marca}, cantidad: ${cantidad}`);
         swal('Se ha agregado al carrito correctamente' + " " + cantidad + " " + 'productos');
+        agregarAlCarro(props.prod, cantidad);
         setMostrar(false);
     }
 

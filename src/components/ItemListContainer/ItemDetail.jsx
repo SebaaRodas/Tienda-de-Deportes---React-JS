@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import './ItemDetail.css';
 import { Container, Row, Col, Button } from "react-bootstrap";
-import swal from "sweetalert";
+
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
 export default function ItemDetail(props) {
 
-    const [mostrar, setMostrar] = useState(true);
-    function onAdd(cantidad) {
-        swal('Se ha agregado al carrito correctamente' + " " + cantidad + " " + 'productos');
-        setMostrar(false);
-    }
+    
 
 
     return (
@@ -25,9 +21,9 @@ export default function ItemDetail(props) {
                         <p>{props.productos.descripcion}</p>
                         <p>Precio: ${props.productos.precio}</p>
                         {
-                            (mostrar) ?
+                            (props.mostrar) ?
                                 <>
-                                    <ItemCount stock={props.productos.stock} initial={1} onAdd={onAdd} />
+                                    <ItemCount stock={props.productos.stock} initial={1} onAdd={props.onAdd} />
                                 </>
                                 :
                                 <>
