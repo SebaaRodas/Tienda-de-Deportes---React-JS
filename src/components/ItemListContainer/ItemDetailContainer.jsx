@@ -8,6 +8,8 @@ import { cartContext } from "../context/CartProvider";
 export default function ItemDetailContainer() {
 
     const {agregarAlCarro} = useContext(cartContext); 
+    // const [total, setTotal] = useState(0);
+    // const [totalCantidad, setTotalCantidad] = useState(0);
     
     const {id} = useParams();
     
@@ -34,9 +36,10 @@ export default function ItemDetailContainer() {
     }, [id])
 
     function onAdd(cantidad) {
-        console.log(`agregaste: ${productos.nombre} ${productos.marca}, cantidad: ${cantidad}`);
-        swal('Se ha agregado al carrito correctamente' + " " + cantidad + " " + 'productos');
+        
+        swal(`Agregaste: ${productos.nombre} ${productos.marca}, cantidad: ${cantidad}`);
         agregarAlCarro(productos, cantidad);
+        console.log(`agregaste: ${productos.nombre} ${productos.marca}, cantidad: ${cantidad}`);
         setMostrar(false);
     }
 

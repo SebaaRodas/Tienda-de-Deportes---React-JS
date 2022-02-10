@@ -2,10 +2,14 @@ import React, { createContext, useState } from "react";
 
 
 
+
 export const cartContext = createContext();
 
 export default function CartProvider({children}){
 
+    // const [total, setTotal] = useState(0);
+    // const [totalCantidad, setTotalCantidad] = useState(0);
+    // const [actualizarCantidad, setActualizarCantidad] = useState(false);
     const [carro, setCarro] = useState([]);
 
     function agregarAlCarro (productos, cantidad){
@@ -24,6 +28,7 @@ export default function CartProvider({children}){
 
     function borrarElemento(id){
         const borrar = carro.filter(elemento => elemento.item.id !== id);
+        // setActualizarCantidad(true);
         setCarro(borrar);
     }
 
@@ -31,8 +36,19 @@ export default function CartProvider({children}){
         setCarro([]);
     }
 
+    function sumarCarro(){
+        // return (carro.length > 0)? carro.map(item => item.item.precio * item.cantidad).reduce((a,b) => a+b) : 0;
+        return carro.reduce((a, b) => a + (b.item.precio * b.cantidad), 0);
+    }
+
+    function sumarCantidad(){
+        // return (carro.length > 0)? carro.map(item => item.cantidad).reduce((a,b)=> a+b): 0;
+        return carro.reduce((a, b) => a + b.cantidad, 0);
+    }
+    
+    
     return(
-        <cartContext.Provider value={{carro, setCarro, agregarAlCarro, borrarCarro, borrarElemento}}>
+        <cartContext.Provider value={{carro, setCarro, agregarAlCarro, borrarCarro, borrarElemento, sumarCarro, sumarCantidad}}>
             {children}
         </cartContext.Provider>
     )

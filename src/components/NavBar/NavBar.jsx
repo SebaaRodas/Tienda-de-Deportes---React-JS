@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState, useContext, useEffect } from "react";
 import './NavBar.css';
 import { Link } from "react-router-dom";
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import logo from "../../multimedia/logo.png";
 import carrito from "../../multimedia/carrito.png";
+import CartWidget from "../CartWidget/CartWidget";
+import { cartContext } from "../context/CartProvider";
+
+
+
+
 
 export default function NavBar() {
+    const {sumarCantidad} = useContext(cartContext);
+    const [totalCantidad, setTotalCantidad] = useState();
+
+    useEffect(()=>{
+       setTotalCantidad(sumarCantidad()); 
+    },[])
+
+    console.log(totalCantidad)
     return (
         <>
             <Navbar className="navbar" expand="lg">
@@ -29,7 +43,7 @@ export default function NavBar() {
                             </NavDropdown>
                             {/* <Nav.Link as={Link} to={'/marcas'}>Marcas</Nav.Link> */}
                             <Nav.Link as={Link} to={'/contacto'}>Contacto</Nav.Link>
-                            <Nav.Link as={Link} to={'/carrito'}><img src={carrito} className="img-fluid carro" width={30} height={30} alt="carro de compras" /></Nav.Link>
+                            <Nav.Link as={Link} to={'/carrito'}><CartWidget totalCantidad={totalCantidad}/></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './ItemDetail.css';
 import { Container, Row, Col, Button } from "react-bootstrap";
 
@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 export default function ItemDetail(props) {
 
-    
 
 
     return (
