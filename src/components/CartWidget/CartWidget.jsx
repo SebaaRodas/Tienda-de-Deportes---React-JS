@@ -1,10 +1,12 @@
 import React from "react";
 import carrito from "../../multimedia/carrito.png";
-export default function ContadorCarrito({totalCantidad}){
+
+
+export default function  CartWidget(){
 
     return(
         <>
-           <img src={carrito} className="img-fluid carro" width={30} height={30} alt="carro de compras"  /><span>{totalCantidad}</span> 
+           <img src={carrito} className="img-fluid carro" width={30} height={30} alt="carro de compras" />
         </>
     )
 }

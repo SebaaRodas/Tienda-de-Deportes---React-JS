@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
     useEffect(()=>{
         setTotal(sumarCarro());
         setTotalCantidad(sumarCantidad());
-    },[]);
+    },[carro]);
     console.log(total, totalCantidad)
     
 
@@ -28,7 +28,7 @@ import { Link } from "react-router-dom";
                     <button className="botonBorrar" onClick={()=>borrarCarro()}>Borrar Carro</button>
                     <br /><br />
                     <h4>Total: ${total}</h4>
-                    <CartWidget totalCantidad = {totalCantidad} />
+                    
                 </>
                 :
                 <>

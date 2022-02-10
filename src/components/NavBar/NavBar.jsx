@@ -7,19 +7,14 @@ import carrito from "../../multimedia/carrito.png";
 import CartWidget from "../CartWidget/CartWidget";
 import { cartContext } from "../context/CartProvider";
 
-
-
-
-
 export default function NavBar() {
     const {sumarCantidad} = useContext(cartContext);
-    const [totalCantidad, setTotalCantidad] = useState();
+    const [totalCantidad, setTotalCantidad] = useState(0);
 
     useEffect(()=>{
        setTotalCantidad(sumarCantidad()); 
     },[])
 
-    console.log(totalCantidad)
     return (
         <>
             <Navbar className="navbar" expand="lg">
@@ -43,7 +38,7 @@ export default function NavBar() {
                             </NavDropdown>
                             {/* <Nav.Link as={Link} to={'/marcas'}>Marcas</Nav.Link> */}
                             <Nav.Link as={Link} to={'/contacto'}>Contacto</Nav.Link>
-                            <Nav.Link as={Link} to={'/carrito'}><CartWidget totalCantidad={totalCantidad}/></Nav.Link>
+                            <Nav.Link as={Link} to={'/carrito'}><CartWidget /><span>{sumarCantidad()}</span></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

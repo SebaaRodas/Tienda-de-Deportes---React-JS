@@ -28,7 +28,7 @@ export default function CartProvider({children}){
 
     function borrarElemento(id){
         const borrar = carro.filter(elemento => elemento.item.id !== id);
-        // setActualizarCantidad(true);
+        
         setCarro(borrar);
     }
 
@@ -37,15 +37,12 @@ export default function CartProvider({children}){
     }
 
     function sumarCarro(){
-        // return (carro.length > 0)? carro.map(item => item.item.precio * item.cantidad).reduce((a,b) => a+b) : 0;
         return carro.reduce((a, b) => a + (b.item.precio * b.cantidad), 0);
     }
 
     function sumarCantidad(){
-        // return (carro.length > 0)? carro.map(item => item.cantidad).reduce((a,b)=> a+b): 0;
         return carro.reduce((a, b) => a + b.cantidad, 0);
     }
-    
     
     return(
         <cartContext.Provider value={{carro, setCarro, agregarAlCarro, borrarCarro, borrarElemento, sumarCarro, sumarCantidad}}>

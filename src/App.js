@@ -16,37 +16,30 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Switch>
-
             {/* ruta home */}
             <Route exact path="/">
               <ItemListContainer greeting="Bienvenido a la Tienda de Deportes" />
             </Route>
-
             {/* ruta productos */}
             <Route path="/productos/:nombre">
               Estas en productos
             </Route>
-
             {/* ruta detalles */}
             <Route path="/detalles/:id">
               <ItemDetailContainer />
             </Route>
-
             {/* ruta marcas */}
             <Route path="/marcas/:marca">
               <Marcas />
             </Route>
-
             {/* ruta contacto */}
             <Route exact path="/contacto">
               Estas en contacto
             </Route>
-
             {/* ruta carrito */}
             <Route exact path="/carrito">
               <Carrito />
             </Route>
-
           </Switch>
           {/* <Fo /> */}
         </BrowserRouter>
