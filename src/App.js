@@ -4,7 +4,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer';
-import Marcas from './components/ItemListContainer/Marcas';
 import CartProvider from './components/context/CartProvider';
 import Carrito from './components/CartWidget/Carrito';
 
