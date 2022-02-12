@@ -30,7 +30,8 @@ function App() {
             </Route>
             {/* ruta marcas */}
             <Route path="/marcas/:marca">
-              <Marcas />
+              {/* <Marcas /> */}
+              <ItemListContainer />
             </Route>
             {/* ruta contacto */}
             <Route exact path="/contacto">
