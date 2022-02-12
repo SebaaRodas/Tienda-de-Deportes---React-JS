@@ -1,12 +1,14 @@
 import React from "react";
 import Item from "./Item"
 
-export default function ItemList(props) {
+export default function ItemList({lista}) {
+
+    console.log(lista)
     return (
         <>
-            {props.lista.length > 0 ?
+            {lista.length > 0 ?
                 <>
-                    {props.lista.map(item => {
+                    {lista.map(item => {
                         return <Item prod={item} key={item.id} />
                     })
                     }
