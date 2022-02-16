@@ -26,10 +26,10 @@ export default function ItemDetailContainer() {
         .catch((err)=>{
             console.log(err);
         })
-    },[])
+    },[id]);
 
     function onAdd(cantidad) {
-        swal(`Agregaste: ${producto.titulo}, cantidad: ${cantidad}`);
+        swal(`Producto agregado correctamente! Agregaste: ${producto.titulo}, cantidad: ${cantidad}`);
         agregarAlCarro(producto, cantidad);
         console.log(`agregaste: ${producto.titulo}, cantidad: ${cantidad}`);
         setMostrar(false);

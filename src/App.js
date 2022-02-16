@@ -6,6 +6,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer';
 import CartProvider from './components/context/CartProvider';
 import Carrito from './components/CartWidget/Carrito';
+import FinalizarCompra from './components/CartWidget/FinalizarCompra';
 
 
 function App() {
@@ -39,6 +40,10 @@ function App() {
             {/* ruta carrito */}
             <Route exact path="/carrito">
               <Carrito />
+            </Route>
+            {/* ruta finalizar compra */}
+            <Route exact path="/finalizarCompra">
+              <FinalizarCompra />
             </Route>
           </Switch>
           {/* <Fo /> */}

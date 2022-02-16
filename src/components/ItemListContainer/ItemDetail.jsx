@@ -25,7 +25,7 @@ export default function ItemDetail(props) {
                                 </>
                                 :
                                 <>
-                                    <Button className="botonGrande"><Link className="carrito" to={"/carrito"}>Finalizar Compra</Link></Button>
+                                    <Button className="botonGrande"><Link className="carrito" to={"/carrito"}>Ver el carro de compras</Link></Button>
                                 </>
                         }
                     </Col>

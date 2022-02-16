@@ -14,8 +14,8 @@ export default function Item(props) {
     
 
     function onAdd(cantidad) {
-        // console.log(`agregaste: ${productos.nombre} ${productos.marca}, cantidad: ${cantidad}`);
-        swal('Se ha agregado al carrito correctamente' + " " + cantidad + " " + 'productos');
+        swal(`Producto agregado correctamente! Agregaste: ${props.prod.titulo}, cantidad: ${cantidad}`);
+        // swal('Se ha agregado al carrito correctamente' + " " + cantidad + " " + 'productos');
         agregarAlCarro(props.prod, cantidad);
         setMostrar(false);
     }
@@ -36,7 +36,7 @@ export default function Item(props) {
                             </>
                             :
                             <>
-                                <Button className="botonGrande"><Link className="carrito" to={"/carrito"}>Finalizar Compra</Link></Button>
+                                <Button className="botonGrande"><Link className="carrito" to={"/carrito"}>Ver el carro de compras</Link></Button>
                             </>
                     }
                     <Button className="botonGrande"><Link className="detalles" to={`/detalles/${props.prod.id}`}>Ver detalles</Link></Button>

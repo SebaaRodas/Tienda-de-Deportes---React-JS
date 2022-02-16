@@ -10,7 +10,7 @@ export default function CartItem({ producto }) {
 
     return (
         <div className="borde">
-            <h3><img src={producto.item.pictureUrl} alt="producto" width={80} height={80} /> {producto.item.nombre} {producto.item.marca} - Cantidad: {producto.cantidad} - Precio: ${producto.item.precio} <button className="boton" onClick={() => borrarElemento(producto.item.id)}>X</button></h3>
+            <h3><img src={producto.item.imagen} alt="producto" width={80} height={80} /> {producto.item.titulo} - Cantidad: {producto.cantidad} - Precio: ${producto.item.precio} <button className="boton" onClick={() => borrarElemento(producto.item.id)}>X</button></h3>
         </div>
     )
 }

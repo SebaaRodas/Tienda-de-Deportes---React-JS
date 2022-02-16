@@ -1,3 +1,8 @@
-.botonBorrar, h4{
+.botonC, h4{
     margin-left: 70%;
+}
+
+.linkCompra{
+    color: black;
+    text-decoration: none;
 }

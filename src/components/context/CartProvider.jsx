@@ -6,10 +6,7 @@ import React, { createContext, useState } from "react";
 export const cartContext = createContext();
 
 export default function CartProvider({children}){
-
-    // const [total, setTotal] = useState(0);
-    // const [totalCantidad, setTotalCantidad] = useState(0);
-    // const [actualizarCantidad, setActualizarCantidad] = useState(false);
+    
     const [carro, setCarro] = useState([]);
 
     function agregarAlCarro (productos, cantidad){
