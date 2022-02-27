@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import './ItemListContainer.css';
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import swal from "sweetalert";

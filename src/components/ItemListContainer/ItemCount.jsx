@@ -21,7 +21,7 @@ export default function ItemCount(props) {
                 <p className="contador">{contador}</p>
                 <button className="botonChico" onClick={() => restar()}>-</button>
             </div>
-            <Button className="botonGrande" onClick={() => props.onAdd(contador)}>Agregar al carrito</Button>
+            <button className="botonAgregar" onClick={() => props.onAdd(contador)}>Agregar al carrito</button>
         </>
     )
 }

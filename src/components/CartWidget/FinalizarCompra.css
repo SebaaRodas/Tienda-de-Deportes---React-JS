@@ -1,0 +1,87 @@
+.formulario{
+    background-color: rgb(7, 6, 6);
+    width: 400px;
+    height: 500px;
+    margin-left: 20%;
+    color: white;
+}
+input{
+    width: 300px;
+    margin: 10px 45px;
+    padding: 10px;
+}
+
+.botonEnviar{
+    margin: 40px 160px;
+    padding: 5px 10px;
+    background-color: rgb(7, 6, 6);
+    color: white;
+    font-size: 30;
+}
+.centrarTitulo{
+    text-align: center;
+}
+/* celulares */
+@media screen and (min-width: 324px) and (max-width: 575px) {
+    .formulario{
+        background-color: rgb(7, 6, 6);
+        width: 90%;
+        height: 430px;
+        margin-left: 5%;
+        color: white;
+    }
+    input{
+        width: 70%;
+        margin: 10px 45px;
+        padding: 5px;
+    } 
+    .botonEnviar{
+        margin-left: 35%;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .formulario{
+        margin-left: 10%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .formulario{
+        background-color: rgb(7, 6, 6);
+        width: 80%;
+        height: 430px;
+        margin-left: 10%;
+        margin-top: 10%;
+        color: white;
+    }
+    input{
+        width: 70%;
+        margin: 10px 45px;
+        padding: 5px;
+    } 
+    .botonEnviar{
+        margin-left: 35%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+    .formulario{
+        background-color: rgb(7, 6, 6);
+        width: 80%;
+        height: 500px;
+        margin-left: 15%;
+        margin-top: 10%;
+        color: white;
+    }
+    input{
+        width: 70%;
+        margin: 10px 55px;
+        padding: 10px;
+    } 
+    .botonEnviar{
+        margin-left: 35%;
+    }
+}
+@media screen and (min-width: 1401px) and (max-width: 1900px) {
+    .formulario{
+        margin-top: 10%;
+    }
+}

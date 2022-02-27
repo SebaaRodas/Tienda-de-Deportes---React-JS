@@ -1,9 +1,53 @@
-.detalleImagen{
+/* .detalleImagen{
     width: 450px;
     height: 550px;
     margin-left: 40px;
-}
+} */
 .carrito{
     text-decoration: none;
     color: white;
+}
+
+.botonGrande{
+    background-color: rgb(24, 24, 29);
+    color: white;
+    margin-top: 10px;
+}
+.centrarDetalles{
+    margin-left: 20%;
+}
+
+
+/* celulares */
+@media screen and (min-width: 345px) and (max-width: 575px){
+    .detalleImagen{
+        width: 300px;
+        height: 350px;
+        margin-left: 20px;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .detalleImagen{
+        width: 450px;
+        height: 500px;
+        margin-left: 20px;
+    }
+}
+/* notebook */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .detalleImagen{
+        width: 350px;
+        height: 400px;
+        margin-left: 20px;
+    }
+}
+/* escritorio - notebook */
+@media screen and (min-width: 992px) and (max-width: 1900px) {
+    .detalleImagen{
+        width: 450px;
+        height: 500px;
+        margin-left: 20px;
+    }
 }

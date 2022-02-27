@@ -1,8 +1,36 @@
-.botonC, h4{
-    margin-left: 70%;
+.botonC{
+    margin-left: 45%;
 }
 
 .linkCompra{
     color: black;
     text-decoration: none;
+}
+
+h4{
+    margin-left: 40%;
+}
+@media screen and (min-width: 324px) and (max-width: 575px) {
+    .botonC{
+        margin-left: 35%;
+    }
+    h4{
+        margin-left: 20%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .botonC{
+        margin-left: 30%;
+    }
+    h4{
+        margin-left: 15%;
+    }
+}
+@media screen and (min-width: 1401px) and (max-width: 1900px) {
+    .botonC{
+        margin-left: 40%;
+    }
+    h4{
+        margin-left: 30%;
+    }
 }

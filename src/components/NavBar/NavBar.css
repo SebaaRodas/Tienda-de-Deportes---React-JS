@@ -1,4 +1,4 @@
-Nav.Link, Link, .detalleLogo{
+Nav.Link, Link, .detalleLogo, NavDropdown {
     text-decoration: none;
     color: black;
 }

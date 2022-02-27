@@ -1,5 +1,5 @@
 import React, {useState, useContext} from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import ItemCount from "./ItemCount";
 import './Item.css';
 import swal from "sweetalert";
@@ -11,22 +11,19 @@ export default function Item(props) {
     const {agregarAlCarro} = useContext(cartContext);
     const [mostrar, setMostrar] = useState(true);
 
-    
-
     function onAdd(cantidad) {
         swal(`Producto agregado correctamente! Agregaste: ${props.prod.titulo}, cantidad: ${cantidad}`);
-        // swal('Se ha agregado al carrito correctamente' + " " + cantidad + " " + 'productos');
         agregarAlCarro(props.prod, cantidad);
         setMostrar(false);
     }
 
     return (
         <>
-            <Card className="card" style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={props.prod.pictureUrl} />
+            <Card className="card">
+                <Card.Img variant="top" src={props.prod.imagen} />
                 <Card.Body>
-                    <Card.Title>{props.prod.nombre} {props.prod.marca}</Card.Title>
-                    <Card.Text>
+                    <Card.Title className="centrar">{props.prod.titulo}</Card.Title>
+                    <Card.Text className="centrar">
                         ${props.prod.precio}
                     </Card.Text>
                     {
@@ -36,10 +33,10 @@ export default function Item(props) {
                             </>
                             :
                             <>
-                                <Button className="botonGrande"><Link className="carrito" to={"/carrito"}>Ver el carro de compras</Link></Button>
+                                <button className="botonGrande"><Link className="carrito" to={"/carrito"}>Ir al Carrito</Link></button>
                             </>
                     }
-                    <Button className="botonGrande"><Link className="detalles" to={`/detalles/${props.prod.id}`}>Ver detalles</Link></Button>
+                    <button className="botonGrande"><Link className="detalles" to={`/detalles/${props.prod.id}`}>Ver detalles</Link></button>
                 </Card.Body>
             </Card>
         </>

@@ -17,9 +17,9 @@ export default function NavBar() {
 
     return (
         <>
-            <Navbar className="navbar" expand="lg">
+            <Navbar className="navbar" bg="danger"  expand="lg">
                 <Container>
-                    <Navbar.Brand><Link className="detalleLogo" to={'/'}><img src={logo} className="img-fluid logo" width={50} height={50} alt="logo" /> Sports Shop</Link></Navbar.Brand>
+                    <Navbar.Brand><Link className="detalleLogo" to={'/'}><img src={logo} className="img-fluid logo" width={50} height={50} alt="logo" /> SPORTS SHOP</Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
                         <Nav className="me-auto">
