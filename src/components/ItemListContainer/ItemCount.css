@@ -24,4 +24,8 @@
     align-items: center;
     margin: 0 10px;
 }
-
+@media screen and (min-width: 325px) and (max-width: 575px){
+    .botonAgregar{
+        margin-left: 20%;
+    }
+}

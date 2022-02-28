@@ -16,8 +16,8 @@ export default function ItemDetail(props) {
                     <Col><img className="detalleImagen" alt="detalle" src={props.producto.imagen} /></Col>
                     <Col>
                         <h3 className="centrarDetalles">{props.producto.titulo}</h3>
-                        <p className="centrarDetalles">{props.producto.descripcion}</p>
-                        <p className="centrarDetalles">Precio: ${props.producto.precio}</p>
+                        <p>{props.producto.descripcion}</p>
+                        <p>Precio: ${props.producto.precio}</p>
                         {
                             (props.mostrar) ?
                                 <>
