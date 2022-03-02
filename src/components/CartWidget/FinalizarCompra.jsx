@@ -17,9 +17,9 @@ export default function FinalizarCompra() {
 
     useEffect(() => {
         setTotal(sumarCarro());
-    }, [total]);
-    function handleClick(e) {
-        e.preventDefault();
+    }, [carro]);
+    function handleClick(event) {
+        event.preventDefault();
         const db = getFirestore();
         const orders = db.collection("orders");
         const miOrden = {
@@ -47,24 +47,24 @@ export default function FinalizarCompra() {
     }
     return (
         <>
-            <form action="formulario" className="formulario">
+            <form action="formulario" className="formulario" onSubmit={handleClick} >
                 <br />
                 <h3 className="centrarTitulo">Ingresa tus datos:</h3>
-                <input type="text" name="name" ref={nameRef} placeholder="Nombre y Apelllido" />
+                <input type="text" name="name" ref={nameRef} placeholder="Nombre y Apelllido" required/>
                 <br />
-                <input type="text" name="mobile" ref={mobileRef} placeholder="Número de Celular" />
+                <input type="text" name="mobile" ref={mobileRef} placeholder="Número de Celular" required/>
                 <br />
-                <input type="text" name="email" ref={emailRef} placeholder="Email" />
+                <input type="text" name="email" ref={emailRef} placeholder="Email" required/>
                 <br />
-                <input type="text" name="state" ref={stateRef} placeholder="Provincia" />
+                <input type="text" name="state" ref={stateRef} placeholder="Provincia" required/>
                 <br />
-                <input type="text" name="city" ref={cityRef} placeholder="Ciudad" />
+                <input type="text" name="city" ref={cityRef} placeholder="Ciudad" required/>
                 <br />
-                <input type="text" name="address" ref={addressRef} placeholder="Dirección" />
+                <input type="text" name="address" ref={addressRef} placeholder="Dirección" required/>
                 <br />
-                <button className="botonEnviar" onClick={() => handleClick()}>ENVIAR</button>
+                <button type="submit" className="botonEnviar" >ENVIAR</button>
             </form>
-            {orderId && (<><h1>Felicitaciones tu compra ha sido exitosa! Tu order es {orderId}</h1><p>El total a pagar es: {total}</p></>)}
+            <div className="orden">{orderId && (<><h3>Felicitaciones tu compra ha sido exitosa! Tu orden es {orderId}</h3><p>El total a pagar es: ${total}</p></>)}</div>
         </>
     );
 }

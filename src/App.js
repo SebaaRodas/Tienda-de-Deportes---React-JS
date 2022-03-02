@@ -6,8 +6,8 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer';
 import CartProvider from './components/context/CartProvider';
 import Carrito from './components/CartWidget/Carrito';
-import FinalizarCompra from './components/CartWidget/FinalizarCompra';
-
+import Footer from './components/Footer/Footer';
+import Portada from './components/NavBar/Portada';
 
 function App() {
   return (
@@ -15,14 +15,16 @@ function App() {
       <CartProvider>
         <BrowserRouter>
           <NavBar />
+          {/* <Portada /> */}
           <Switch>
+            
             {/* ruta home */}
             <Route exact path="/">
               <ItemListContainer greeting="Bienvenido a la Tienda de Deportes" />
             </Route>
             {/* ruta productos */}
-            <Route path="/productos/:nombre">
-              Estas en productos
+            <Route path="/productos/:producto">
+            <ItemListContainer />
             </Route>
             {/* ruta detalles */}
             <Route path="/detalles/:id">
@@ -30,7 +32,6 @@ function App() {
             </Route>
             {/* ruta marcas */}
             <Route path="/marcas/:marca">
-              {/* <Marcas /> */}
               <ItemListContainer />
             </Route>
             {/* ruta contacto */}
@@ -41,12 +42,8 @@ function App() {
             <Route exact path="/carrito">
               <Carrito />
             </Route>
-            {/* ruta finalizar compra */}
-            <Route exact path="/finalizarCompra">
-              <FinalizarCompra />
-            </Route>
           </Switch>
-          {/* <Fo /> */}
+          <Footer />
         </BrowserRouter>
       </CartProvider>
     </>

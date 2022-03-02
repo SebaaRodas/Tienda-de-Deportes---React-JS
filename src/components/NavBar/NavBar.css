@@ -1,4 +1,4 @@
-Nav.Link, Link, .detalleLogo, NavDropdown {
+Link, .detalleLogo{
     text-decoration: none;
     color: black;
 }
@@ -6,4 +6,12 @@ Nav.Link, Link, .detalleLogo, NavDropdown {
 .carro{
     filter: brightness(1.1);
     mix-blend-mode: multiply;
+}
+
+a:hover{
+    color: rgb(14, 13, 13)!important;
+    background-color: rgb(241, 236, 237);
+}
+a:active{
+    background-color: rgb(248, 244, 244)!important;
 }
