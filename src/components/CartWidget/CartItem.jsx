@@ -24,7 +24,6 @@ export default function CartItem({ producto }) {
                     </Col>
                 </Row>
             </Container>
-            {/* <h3> {producto.item.titulo} - Cantidad: {producto.cantidad} - Precio: ${producto.item.precio * producto.cantidad}  <button className="boton" onClick={() => borrarElemento(producto.item.id)}>x</button></h3> */}
         </div>
     )
 }

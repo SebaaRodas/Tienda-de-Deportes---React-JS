@@ -15,7 +15,6 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Switch>
-
             {/* ruta home */}
             <Route exact path="/">
               <ItemListContainer greeting="Bienvenido a la Tienda de Deportes" />

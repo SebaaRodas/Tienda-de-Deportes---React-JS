@@ -52,9 +52,9 @@ export default function FinalizarCompra() {
                 <h3 className="centrarTitulo">Ingresa tus datos:</h3>
                 <input type="text" name="name" ref={nameRef} placeholder="Nombre y Apelllido" required/>
                 <br />
-                <input type="text" name="mobile" ref={mobileRef} placeholder="Número de Celular" required/>
+                <input type="number" name="mobile" ref={mobileRef} placeholder="Número de Celular" required/>
                 <br />
-                <input type="text" name="email" ref={emailRef} placeholder="Email" required/>
+                <input type="email" name="email" ref={emailRef} placeholder="Email" required/>
                 <br />
                 <input type="text" name="state" ref={stateRef} placeholder="Provincia" required/>
                 <br />

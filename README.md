@@ -1,73 +1,42 @@
-# Getting Started with Create React App
+# SPORTS-SHOP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://www.loom.com/share/b77f5c7f539747b284e98504136e6b0e
 
-## Available Scripts
+## Descripción
 
-In the project directory, you can run:
+Este proyecto es una tienda de deportes, con el fin de practicar e implementar los conocimientos aprendidos en el curso de React Js de Coderhouse. No es de manera publicitaria (debido a que están varias marcas importantes) y los precios no son los correspondientes a la actualidad. 
 
-### `npm start`
+## Funcionamiento del código:
+Breve explicación sobre los componentes que tiene esta app: 
+- Navbar = Renderiza la barra de navegación.
+- ItemListContainer = Renderiza todos los productos de la tienda, ya sea mediante el home o filtrando por categorías.
+- ItemList = Es el encargado de mapear el producto que proviene de la base de datos de firebase. 
+- Item = Es el que muestra la card del producto en si, con sus respectivas funciones y diseño. 
+- ItemCount = Es el que permite aumentar o descontar la cantidad del producto a seleccionar, siempre y cuando no supere el valor inicial ni el stock máximo. También permite agregar el producto al carro. Esta dentro de Item y de ItemDetail.
+- ItemDetail = Muestra el producto de manera más detallada (recordar que tiene las funciones del ItemCount).
+- ItemDetailContainer = Renderiza el ItemDetail, cuando el usuario da click en "Ver detalles". 
+- Carrito = Mapea los productos agregados al carro (con los totales y cantidades correspondientes) y los renderiza en CartItem. También renderiza el formulario de compra. 
+- CartItem = Muestra los productos agregados al carro con su respectivo diseño.
+- FinalizarCompra = Muestra el formulario de compra. 
+- CartWidget = Muestra el ícono del carrito que va en la navbar.
+- Footer = Es decorativo, sin funcionalidades, mostrando logos de algunas redes sociales y el autor de la app.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# HERRAMIENTAS UTILIZADAS
+- React JS.
+- Create React App.
+- React Router Dom.
+- Firebase's Firestore 8.8.0
+- Sweetalert 2.1.2
+- React-Bootstrap.
 
-Esta página está destinada a realizar los desafíos prácticos propuestos por el curso de Coderhouse. 
-No es de manera publicitaria (debido a que están varias marcas importantes), sino con el fin de ir mejorando mi aprendizaje en React Js.
+# INSTALACIÓN
+1. Desde un terminal seleccione la carpeta donde quiera almacenar el proyecto.
+2. Clonar mi repositorio: git clone https://github.com/SebaaRodas/Tienda-de-Deportes---React-JS.git
+3. En la carpeta seleccionada se creará una nueva carpeta con mi código de git, por lo que deberá moverse a dicha carpeta desde la terminal. 
+4. Debe instalar las dependencias correspondientes mediante: npm install
+5. Para correr el proyecto: npm start
+6. Para frenar el proyecto: Ctrl+C
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# DEPLOY
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Link de la App: 
