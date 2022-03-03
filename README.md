@@ -38,5 +38,4 @@ Breve explicación sobre los componentes que tiene esta app:
 6. Para frenar el proyecto: Ctrl+C
 
 # DEPLOY
-
-Link de la App: 
+Link de la App: https://sports-shop.netlify.app/
