@@ -1,21 +1,20 @@
-.botonesContador{
-    display: flex;
-    margin-left: 30%;
-    align-items: center;
+.centrar{
+    text-align: center;
 }
 
 .botonChico{
-    display: inline-flex;
+    /* display: inline-flex; */
     align-items: center;
     background-color: black;
     color: white;
+    margin-right: 2px;
+    margin-left: 2px;
 }
 
 .botonAgregar{
     background-color: rgb(17, 17, 20);
     color: white;
     margin-top: 10px;
-    margin-left: 25%;
 }
 
 .contador{
@@ -24,8 +23,4 @@
     align-items: center;
     margin: 0 10px;
 }
-@media screen and (min-width: 325px) and (max-width: 575px){
-    .botonAgregar{
-        margin-left: 20%;
-    }
-}
+

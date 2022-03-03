@@ -6,7 +6,7 @@
         margin-top: 20px;
         padding: 10px;
         width:80%;
-        height:370px;
+        height:390px;
         border:2px solid rgb(16, 17, 17);
         border-radius:20px;
         box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
@@ -15,9 +15,9 @@
         margin-left: 20%;
     }
     .foto{
-        margin-left: 10%;
-        width: 140px;
-        height: 150px;
+        margin-left: 12%;
+        width: 170px;
+        height: 180px;
         margin-bottom: 10px;
     }
     h5, p{

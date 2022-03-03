@@ -15,7 +15,8 @@ export default function ItemDetail(props) {
                 <Row>
                     <Col><img className="detalleImagen" alt="detalle" src={props.producto.imagen} /></Col>
                     <Col>
-                        <h3 className="centrarDetalles">{props.producto.titulo}</h3>
+                    <div className="centrarDetalles">
+                        <h3 >{props.producto.titulo}</h3>
                         <p>{props.producto.descripcion}</p>
                         <p>Precio: ${props.producto.precio}</p>
                         <p>Seleccione el talle: <select name="Talle">
@@ -26,6 +27,7 @@ export default function ItemDetail(props) {
                                     <option value="XXL">XXL</option>
                         </select>
                         </p>
+                    </div>
                 {
                     (props.mostrar) ?
                         <>
