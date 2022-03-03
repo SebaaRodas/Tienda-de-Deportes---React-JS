@@ -3,7 +3,6 @@ import Item from "./Item"
 
 export default function ItemList({lista}) {
 
-    console.log(lista)
     return (
         <>
             {lista.length > 0 ?

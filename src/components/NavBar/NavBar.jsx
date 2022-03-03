@@ -36,7 +36,6 @@ export default function NavBar() {
                                 <NavDropdown.Item as={Link} to={'/marcas/puma'}>Puma</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to={'/marcas/reebok'}>Reebok</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link as={Link} to={'/contacto'}>Contacto</Nav.Link>
                             <Nav.Link as={Link} to={'/carrito'}><CartWidget /><span>{sumarCantidad()}</span></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

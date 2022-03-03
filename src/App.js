@@ -7,7 +7,6 @@ import ItemDetailContainer from './components/ItemListContainer/ItemDetailContai
 import CartProvider from './components/context/CartProvider';
 import Carrito from './components/CartWidget/Carrito';
 import Footer from './components/Footer/Footer';
-import Portada from './components/NavBar/Portada';
 
 function App() {
   return (
@@ -15,16 +14,15 @@ function App() {
       <CartProvider>
         <BrowserRouter>
           <NavBar />
-          {/* <Portada /> */}
           <Switch>
-            
+
             {/* ruta home */}
             <Route exact path="/">
               <ItemListContainer greeting="Bienvenido a la Tienda de Deportes" />
             </Route>
             {/* ruta productos */}
             <Route path="/productos/:producto">
-            <ItemListContainer />
+              <ItemListContainer />
             </Route>
             {/* ruta detalles */}
             <Route path="/detalles/:id">
@@ -33,10 +31,6 @@ function App() {
             {/* ruta marcas */}
             <Route path="/marcas/:marca">
               <ItemListContainer />
-            </Route>
-            {/* ruta contacto */}
-            <Route exact path="/contacto">
-              Estas en contacto
             </Route>
             {/* ruta carrito */}
             <Route exact path="/carrito">
